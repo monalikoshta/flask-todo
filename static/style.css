@@ -1,0 +1,39 @@
+.container{
+    margin: 30px;
+    text-align: center;
+}
+
+.task{
+    border: 1px solid grey;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#btn-add{
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 4px;
+    padding: 5px 20px;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+#btn-update{
+    background-color: #2f2fe8;
+    border: 1px solid #2f2fe8;
+    border-radius: 4px;
+    padding: 5px 20px;
+    color: white;
+}
+
+#btn-delete{
+    background-color: #e63f3f;
+    border: 1px solid #e63f3f;
+    border-radius: 4px;
+    padding: 5px 20px;
+    color: white;
+}
