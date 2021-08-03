@@ -11,12 +11,14 @@ class Todo(db.Model):
     title = db.Column(db.String(100))
     complete = db.Column(db.Boolean)
 
+# home page api
 @app.route('/')
 def home():
     todo_list = Todo.query.all()
     # print(todo_list)
     return render_template('index.html',todo_list = todo_list)
 
+# add task api
 @app.route('/add', methods=['POST'])
 def add():
     title = request.form.get("title")
@@ -25,6 +27,7 @@ def add():
     db.session.commit()
     return redirect(url_for("home"))
 
+# update task api
 @app.route('/update/<int:id>')
 def update(id):
     todo = Todo.query.filter_by(id=id).first()
@@ -32,6 +35,7 @@ def update(id):
     db.session.commit()
     return redirect(url_for("home"))
 
+# delete task api
 @app.route('/delete/<int:id>')
 def delete(id):
     todo = Todo.query.filter_by(id=id).first()
